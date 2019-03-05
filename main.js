@@ -7,6 +7,14 @@ var vm = new Vue({
     },
       methods: {}
     })
+    addtido:function(event){
+        if (this.input){
+            this.todos.push(title: this.input,done:false});
+this.input=''
+this.setTodos()
+        }
+        }
+    }
     Vue.component('todo-item', {
         template: '\
           <li>\
@@ -47,3 +55,4 @@ var vm = new Vue({
           }
         }
       })
+

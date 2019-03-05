@@ -13,9 +13,8 @@
             <input
               v-model="newTodoText"
               id="new-todo"
-
             >
-            <button v-on:click="todo">追加</button>
+              <button v-on:click="addtodo">追加</button>
           </form>
           <ul>
             <li
@@ -24,7 +23,9 @@
               v-bind:key="todo.id"
               v-bind:title="todo.title"
               v-on:remove="todos.splice(index, 1)"
-            ></li>
+             >
+             <input v-on:change="donetodo(todo)"v-model="todo.done" type="checkbox">
+             </li>
           </ul>
 </div>
 
